@@ -1,32 +1,26 @@
-import { useState, useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Layout from './Components/Layout';
+import Register from './Pages/Registration';
+import Members from './Pages/Members';
+import Posts from './Pages/Posts';
+import './assets/App.css';
 
+const App = () => {
+    return (
+        <div>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path="members" element={<Register />} />
+                        <Route path="members/all" element={<Members/>}/>
+                        <Route path="posts" element={<Posts />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    )
+};
 
-function App() {
-
-  //const [data, setData] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      console.log(import.meta.env.VITE_API_URL)
-      try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}posts`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-
-        const result = await response.json();
-        console.log(result);
-      } catch (e) { console.log(e) }
-    }
-    fetchData();
-  }, []);
-
-
-  return (
-    <>
-      <h1>Hello world</h1>
-    </>
-  )
-}
-
-export default App
+export default App;
