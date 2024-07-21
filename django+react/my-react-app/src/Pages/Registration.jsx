@@ -23,10 +23,6 @@ const Register = () => {
                 <input className="form-control" name="member-no" type="number" placeholder="Leave blank if not an official member"/>
             </div>
             <div className="form-group">
-                <label htmlFor="name">Club Role</label>
-                <input className="form-control" name="member-no" type="text" placeholder="" required/>
-            </div>
-            <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input className="form-control" name="email" type="email" required/>
             </div>

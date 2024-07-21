@@ -14,9 +14,9 @@ const Layout = () => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto">
                                 <li className="nav-item"><Link to="/" className="nav-link active">Home</Link></li>
-                                <li className="nav-item"><Link to="/posts" className="nav-link ">Posts</Link></li>
-                                <li className="nav-item"><Link to="/members" className="nav-link">Registration</Link></li>
-                                <li className="nav-item"><Link to="/members/all" className="nav-link">Members</Link></li>
+                                <li className="nav-item"><Link to="/events/schedule" className="nav-link">Schedule</Link></li>
+                                <li className="nav-item"><Link to="/proposals" className="nav-link">Proposals</Link></li>
+                                <li className="nav-item"><Link to="/account" className="nav-link">Account</Link></li>
                             </ul>
                         </div>
                     </div>
